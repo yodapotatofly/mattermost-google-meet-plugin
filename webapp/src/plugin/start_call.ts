@@ -14,7 +14,7 @@ export const startCall = (channel: Channel) => {
         const state = getState();
 
         const team = state.entities.teams.teams[state.entities.teams.currentTeamId];
-        const callName = `${team.name}-${channel.name}`; // = uuidv4();
+        const callName = uuidv4();
         const url = `http://g.co/meet/${callName}`;
 
         // Open a window?
